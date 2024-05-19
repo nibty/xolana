@@ -62,10 +62,10 @@ lazy_static! {
 /// calculated by cost_model, based on transaction's signatures, write locks,
 /// data size and built-in and SBF instructions.
 pub const MAX_BLOCK_UNITS: u64 =
-    MAX_BLOCK_REPLAY_TIME_US * COMPUTE_UNIT_TO_US_RATIO * MAX_CONCURRENCY;
+    MAX_BLOCK_REPLAY_TIME_US * COMPUTE_UNIT_TO_US_RATIO * MAX_CONCURRENCY * 2;
 
 #[cfg(test)]
-static_assertions::const_assert_eq!(MAX_BLOCK_UNITS, 48_000_000);
+static_assertions::const_assert_eq!(MAX_BLOCK_UNITS, 96_000_000);
 
 /// Number of compute units that a writable account in a block is allowed. The
 /// limit is to prevent too many transactions write to same account, therefore
