@@ -3,7 +3,7 @@
 { # this ensures the entire script is downloaded #
 
 RELEASE="${VARIABLE:-xolana}"
-GH_LATEST_TARBALL="https://api.github.com/repos/nibty/xolana/tarball/$RELEASE"
+GH_LATEST_TARBALL="https://api.github.com/repos/jacklevin74/xolana/tarball/$RELEASE"
 INSTALL_DIR="$HOME/.local/share/xolana/releases/$RELEASE"
 
 set -e
