@@ -19,7 +19,7 @@ echo "branch: $branch tag: $tag"
 # The tag is expected to be the branch name plus a patch number (unless branch is master). eg:
 #   tag:    v1.2.3
 #   branch: v1.2
- if [[ "$tag" != "$branch"* && $branch != "master" ]]; then
+ if [[ "$tag" != "$branch"* && $branch != "master" && $branch != "xolana" ]]; then
     >&2 echo "Tag must start with the branch name (unless branch is master). Tag: $tag   Branch: $branch"
     exit 1
 fi
