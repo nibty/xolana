@@ -99,15 +99,15 @@ Alternatively use the Github UI.
 ### Miscellaneous Clean up
 
 1. Pin the spl-token-cli version in the newly promoted stable branch by setting `splTokenCliVersion` in scripts/spl-token-cli-version.sh to the latest release that depends on the stable branch (usually this will be the latest spl-token-cli release).
-1. Update [mergify.yml](https://github.com/solana-labs/solana/blob/master/.mergify.yml) to add backport actions for the new branch and remove actions for the obsolete branch.
-1. Adjust the [Github backport labels](https://github.com/solana-labs/solana/labels) to add the new branch label and remove the label for the obsolete branch.
+1. Update [mergify.yml](https://github.com/jacklevin74/xolana/blob/master/.mergify.yml) to add backport actions for the new branch and remove actions for the obsolete branch.
+1. Adjust the [Github backport labels](https://github.com/jacklevin74/xolana/labels) to add the new branch label and remove the label for the obsolete branch.
 1. Announce on Discord #development that the release branch exists so people know to use the new backport labels.
 
 ## Steps to Create a Release
 
 ### Create the Release Tag on GitHub
 
-1. Go to [GitHub Releases](https://github.com/solana-labs/solana/releases) for tagging a release.
+1. Go to [GitHub Releases](https://github.com/jacklevin74/xolana/releases) for tagging a release.
 1. Click "Draft new release".  The release tag must exactly match the `version`
    field in `/Cargo.toml` prefixed by `v`.
    1.  If the Cargo.toml version field is **0.12.3**, then the release tag must be **v0.12.3**
@@ -126,22 +126,22 @@ Alternatively use the Github UI.
 
 ### Update release branch with the next patch version
 
-[This action](https://github.com/solana-labs/solana/blob/master/.github/workflows/increment-cargo-version-on-release.yml) ensures that publishing a release will trigger the creation of a PR to update the Cargo.toml files on **release branch** to the next semantic version (e.g. 0.9.0 -> 0.9.1). Ensure that the created PR makes it through CI and gets submitted.
+[This action](https://github.com/jacklevin74/xolana/blob/master/.github/workflows/increment-cargo-version-on-release.yml) ensures that publishing a release will trigger the creation of a PR to update the Cargo.toml files on **release branch** to the next semantic version (e.g. 0.9.0 -> 0.9.1). Ensure that the created PR makes it through CI and gets submitted.
 
 ### Prepare for the next release
-1.  Go to [GitHub Releases](https://github.com/solana-labs/solana/releases) and create a new draft release for `X.Y.Z+1` with empty release notes.  This allows people to incrementally add new release notes until it's time for the next release
+1.  Go to [GitHub Releases](https://github.com/jacklevin74/xolana/releases) and create a new draft release for `X.Y.Z+1` with empty release notes.  This allows people to incrementally add new release notes until it's time for the next release
     1. Also, point the branch field to the same branch and mark the release as **"This is a pre-release"**.
-1.  Go to the [Github Milestones](https://github.com/solana-labs/solana/milestones).  Create a new milestone for the `X.Y.Z+1`, move over
+1.  Go to the [Github Milestones](https://github.com/jacklevin74/xolana/milestones).  Create a new milestone for the `X.Y.Z+1`, move over
 unresolved issues still in the `X.Y.Z` milestone, then close the `X.Y.Z` milestone.
 
 ### Verify release automation success
-Go to [Solana Releases](https://github.com/solana-labs/solana/releases) and click on the latest release that you just published.
+Go to [Solana Releases](https://github.com/jacklevin74/xolana/releases) and click on the latest release that you just published.
 Verify that all of the build artifacts are present, then uncheck **"This is a pre-release"** for the release.
 
 Build artifacts can take up to 60 minutes after creating the tag before
 appearing.  To check for progress:
 * The `solana-secondary` Buildkite pipeline handles creating the Linux and macOS release artifacts and updated crates.  Look for a job under the tag name of the release: https://buildkite.com/solana-labs/solana-secondary.
-* The Windows release artifacts are produced by GitHub Actions.  Look for a job under the tag name of the release: https://github.com/solana-labs/solana/actions.
+* The Windows release artifacts are produced by GitHub Actions.  Look for a job under the tag name of the release: https://github.com/jacklevin74/xolana/actions.
 
 [Crates.io](https://crates.io/crates/solana) should have an updated Solana version.  This can take 2-3 hours, and sometimes fails in the `solana-secondary` job.
 If this happens and the error is non-fatal, click "Retry" on the "publish crate" job
