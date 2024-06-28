@@ -150,12 +150,12 @@ matches the logical flow in your PR description.
 
 Labels make it easier to manage and track PRs / issues.  Below some common labels
 that we use in Solana.  For the complete list of labels, please refer to the
-[label page](https://github.com/solana-labs/solana/issues/labels):
+[label page](https://github.com/jacklevin74/xolana/issues/labels):
 
 * "feature-gate": when you add a new feature gate or modify the behavior of
 an existing feature gate, please add the "feature-gate" label to your PR.
 New feature gates should also always have a corresponding tracking issue
-(go to "New Issue" -> "Feature Gate Tracker [Get Started](https://github.com/solana-labs/solana/issues/new?assignees=&labels=feature-gate&template=1-feature-gate.yml&title=Feature+Gate%3A+)")
+(go to "New Issue" -> "Feature Gate Tracker [Get Started](https://github.com/jacklevin74/xolana/issues/new?assignees=&labels=feature-gate&template=1-feature-gate.yml&title=Feature+Gate%3A+)")
 and should be updated each time the feature is activated on a cluster.
 
 * "automerge": When a PR is labelled with "automerge", the PR will be
@@ -256,7 +256,7 @@ name = "solana-<PACKAGE_NAME>"
 version = "0.0.1"
 description = "<DESCRIPTION>"
 authors = ["Solana Labs Maintainers <maintainers@solanalabs.com>"]
-repository = "https://github.com/solana-labs/solana"
+repository = "https://github.com/jacklevin74/xolana"
 homepage = "https://solana.com/"
 documentation = "https://docs.rs/solana-<PACKAGE_NAME>"
 license = "Apache-2.0"

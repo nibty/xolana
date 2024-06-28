@@ -113,7 +113,7 @@ generating the static version of the docs.
 
 There are several known locales that fail to build the current documentation.
 They are listed in the commented out `localesNotBuilding` attribute in the
-[`docusaurus.config.js`](https://github.com/solana-labs/solana/blob/master/docs/docusaurus.config.js)
+[`docusaurus.config.js`](https://github.com/jacklevin74/xolana/blob/master/docs/docusaurus.config.js)
 
 ## CI Build Flow
 
